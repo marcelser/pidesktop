@@ -14,7 +14,7 @@ def runCommand(command):
         print(line);
 
 def updategpio6():
-    filename = '/boot/config.txt';
+    filename = '/boot/firmware/config.txt';
     key = 'gpio';
     value = '6=op,pn,dl'
     fr = open(filename,'rb');
