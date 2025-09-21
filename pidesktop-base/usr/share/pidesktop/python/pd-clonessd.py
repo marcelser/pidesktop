@@ -3,11 +3,11 @@ import os;
 #from pppBoot import Manager;
 
 def runCommand(command):
-    print command;
+    print(command);
     r = os.popen(command);
     info = r.readlines();
     for line in info:
-        print line;
+        print(line);
 
 def newPartition(sd):
     command = 'echo -e "o\nn\np\n1\n\n\nw\n" | sudo fdisk ' + sd;
@@ -22,7 +22,7 @@ def chekSD():
         num = 0;
         for line in info :
             if line.startswith("ls:") :
-                print 'Please insert mSATA disk.';
+                print('Please insert mSATA disk.');
                 return;
             if line.strip()[-1].isdigit():
                 num += 1;
@@ -32,11 +32,11 @@ def chekSD():
 #            newPartition(sd);
         diskClone();
     else:
-        print 'Please insert mSATA disk.';
+        print('Please insert mSATA disk.');
  
 def diskClone():
     message = "Calling the 'SD Card copier' to clone the filesystem from SD Card to SSD...";
-    print message;
+    print(message);
     command = 'piclone';
     runCommand(command);
 #    m = Manager();
