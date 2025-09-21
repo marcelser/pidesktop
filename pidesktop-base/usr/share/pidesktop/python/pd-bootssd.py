@@ -3,7 +3,7 @@ import os;
 
 class Manager:
     def updateBoot(self):
-        filename = '/boot/cmdline.txt';
+        filename = '/boot/firmware/cmdline.txt';
         fr = open(filename,'rb');
         key = 'root=';
         value = "root=/dev/sda2";
