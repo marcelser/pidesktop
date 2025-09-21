@@ -33,15 +33,15 @@ class Manager:
 
     def runask(self):
         ask = "Do you want to change the file system from SD card to SSD?\nIf 'YES',please make sure the 'SD Card Copier' execute correctly.(y/N): "
-        answer = raw_input(ask);
+        answer = input(ask);
         if answer == 'Y' or answer == 'y' or answer == 'yes' or answer == 'YES':
             self.updateBoot();
 
     def reboot(self):
         ask = "To put the new configuration into effect, you need to restart the system.\nDo you want to reboot now? (Y/n): ";
-        answer = raw_input(ask);
+        answer = input(ask);
         if answer == 'N' or answer == 'n' or answer == 'no' or answer == 'NO':
-            print "You don't want to restart now.";
+            print("You don't want to restart now.");
         else:
             os.popen("sudo reboot");
 
