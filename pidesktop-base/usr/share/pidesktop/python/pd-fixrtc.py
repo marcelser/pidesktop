@@ -7,11 +7,11 @@
 import os;
 
 def runCommand(command):
-    print command;
+    print(command);
     r = os.popen(command);
     info = r.readlines();
     for line in info:
-        print line;
+        print(line);
 
 def updategpio6():
     filename = '/boot/config.txt';
