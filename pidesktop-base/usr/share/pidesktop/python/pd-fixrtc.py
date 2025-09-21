@@ -45,7 +45,7 @@ def updategpio6():
         fr.close();
 
 def updategpio13():
-    filename = '/boot/config.txt';
+    filename = '/boot/firmware/config.txt';
     key = 'gpio';
     value = '13=ip'
     fr = open(filename,'rb');
@@ -77,7 +77,7 @@ def updategpio13():
 
 
 def updateConfig():
-    filename = '/boot/config.txt';
+    filename = '/boot/firmware/config.txt';
     key = 'dtoverlay';
     value = 'i2c-rtc,pcf8563'
     fr = open(filename,'rb');
