@@ -4,7 +4,7 @@ import os;
 class Manager:
     def updateBoot(self):
         filename = '/boot/firmware/cmdline.txt';
-        fr = open(filename,'rb');
+        fr = open(filename,'r');
         key = 'root=';
         value = "root=/dev/sda2";
         try:
@@ -22,7 +22,7 @@ class Manager:
                             newValue += v + ' ';
             
             if update :
-                fw = open(filename,'wb');
+                fw = open(filename,'w');
                 try:
                     fw.write(newValue.strip());
                 finally:
